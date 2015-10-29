@@ -1,3 +1,54 @@
+#HOMEPAGE
+
+home:
+    path: /
+    defaults: { _controller: AppBundle:Default:index }
+
+
+
+#PRODUCTOS
+
 listadoProductos:
     path: /productos
-    defaults: { _controller:AppBundle:Default:index }
+    defaults: { _controller: AppBundle:Producto:listar }
+
+producto:
+    path: /producto/{id}
+    defaults: { _controller: AppBundle:Producto:ver }
+
+nuevoProducto:
+    path: /nuevo-producto
+    defaults: { _controller: AppBundle:Producto:crear }
+
+actualizarProducto:
+    path: /actualizar-producto/{id}
+    defaults: { _controller: AppBundle:Producto:actualizar }
+
+borrarProducto:
+    path: /borrar-producto/{id}
+    defaults: { _controller: AppBundle:Producto:borrar }
+
+pujar:
+    path: /pujar/{id}
+    defaults: { _controller: AppBundle:Producto:pujar }
+
+
+
+#USUARIOS
+
+perfil:
+    path: /perfil
+    defaults: { _controller: AppBundle:Usuario:perfil }
+
+
+listadoUsuarios:
+    path: /listar-usuarios
+    defaults: { _controller: AppBundle:Usuario:listar }
+
+
+
+#CONTACTO
+
+contacto:
+    path: /contacto
+    defaults: { _controller: AppBundle:Contacto:index }
